@@ -1,0 +1,21 @@
+{
+  "name": "itinerary-travel-journal-app",
+  "description": "My Itinerary Travel Journal. This App will let you make a date to date itinerary of your travels. You will be able to input flights, hotel check-in/check-out dates, and a record of all the places, and what time, you want to visit for that day. You will be also be able to e-mail your itinerary to people as either a safety measure or as a way to meet up with friends.",
+  "main": "index.js",
+  "authors": [
+    "Melanie Baker <melanierbaker@yahoo.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/MelanieRBaker/Itinerary-Travel-Journal-App",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6",
+    "firebase": "^3.0.4"
+  }
+}
