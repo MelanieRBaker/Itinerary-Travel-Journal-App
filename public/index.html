@@ -1,14 +1,81 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBxXA-ruPdw1YYtB1uC3Iod3ossnFQJH3Y">
+  </script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxXA-ruPdw1YYtB1uC3Iod3ossnFQJH3Y&libraries=places"></script>
+
+
+
+
+
+
   <title>Itinerary Travel Journal</title>
   <link rel="stylesheet" href="main.css">
+
+
+
+
+  <script>
+    var map;
+    function initialize() {
+      var center = new google.maps.LatLng(36.174465, -86.767960);
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: center,
+        zoom: 8
+      });
+    }
+    goole.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      height: 50%;
+      width: 50%;
+    }
+  </style>
 </head>
 <body>
   <h1>Itinerary Travel Journal</h1>
+  <div id="map">
+
+  </div>
+  <input id="pac-input" class="controls" type="text" placeholder="Start typing here">
+
 
   <script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
+</html>
+ -->
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Places Searchbox</title>
+
+  </head>
+  <body>
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div id="map"></div>
+
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxXA-ruPdw1YYtB1uC3Iod3ossnFQJH3Y&libraries=places&callback=initAutocomplete"
+         async defer></script>
+
+    <script src="main.js"></script>
+  </body>
 </html>
