@@ -1,81 +1,87 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBxXA-ruPdw1YYtB1uC3Iod3ossnFQJH3Y">
-  </script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxXA-ruPdw1YYtB1uC3Iod3ossnFQJH3Y&libraries=places"></script>
-
-
-
-
-
-
-  <title>Itinerary Travel Journal</title>
-  <link rel="stylesheet" href="main.css">
-
-
-
-
-  <script>
-    var map;
-    function initialize() {
-      var center = new google.maps.LatLng(36.174465, -86.767960);
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: center,
-        zoom: 8
-      });
-    }
-    goole.maps.event.addDomListener(window, 'load', initialize);
-  </script>
-
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    #map {
-      height: 50%;
-      width: 50%;
-    }
-  </style>
-</head>
-<body>
-  <h1>Itinerary Travel Journal</h1>
-  <div id="map">
-
-  </div>
-  <input id="pac-input" class="controls" type="text" placeholder="Start typing here">
-
-
-  <script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
-</body>
-</html>
- -->
-
-
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="lib/bootstrap-daterangepicker/daterangepicker.css"/>
     <link rel="stylesheet" href="main.css">
-    <title>Places Searchbox</title>
-
+    <title>Itinerary Travel Journal</title>
   </head>
-  <body>
-    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-    <div id="map"></div>
+  <body ng-app ="app">
 
 
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxXA-ruPdw1YYtB1uC3Iod3ossnFQJH3Y&libraries=places&callback=initAutocomplete"
-         async defer></script>
+    <nav class="nav">
+     <h1>Itinerary Travel Journal</h1>
+     <ul>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Logout</a></li>
+     </ul>
+    </nav>
 
-    <script src="main.js"></script>
+
+    <div class="research">
+      <h1>Do your travel research!</h1>
+      <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    </div>
+     <div id="map"></div>
+
+
+
+
+
+  <div class="date">
+     <!-- date picker -->
+     <h1>Pick your travel dates!</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" ng-controller="TestCtrl">
+        <form name="dateForm" class="form-horizontal">
+          <div class="form-group">
+              <label for="daterange1" class="control-label">Pick Dates</label>
+              <input date-range-picker id="daterange1" name="daterange1" class="form-control date-picker" type="text"
+              ng-model="date" required/>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="journal">
+   <h1>Travel Journal</h1>
+  </div>
+
+
+
+
+
+
+
+<script src="lib/jquery/dist/jquery.js"></script>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/moment/moment.js"></script>
+<script src="lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="lib/angular-daterangepicker/js/angular-daterangepicker.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxXA-ruPdw1YYtB1uC3Iod3ossnFQJH3Y&libraries=places&callback=initAutocomplete"
+         async defer>
+    </script>
+<script src="main.js"></script>
+<script src="controllers/DatePickerCtrl.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+
   </body>
 </html>

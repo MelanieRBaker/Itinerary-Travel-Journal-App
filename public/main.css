@@ -1,3 +1,37 @@
+/*nav bar*/
+
+nav {
+  border: solid 2px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0 10px;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+
+
+/*Research*/
+.research {
+  display: inline-block;
+}
+
+
+
+
+
+
+
+/*Google Map API*/
+
 html, body {
   height: 100%;
   margin: 0;
@@ -5,7 +39,8 @@ html, body {
 }
 #map {
   height: 50%;
-  width: 50%;
+  width: 40%;
+  border: solid 2px;
 }
 .controls {
   margin-top: 10px;
@@ -52,3 +87,10 @@ html, body {
   width: 345px;
 }
 
+
+
+/*date picker*/
+.date {
+  display: inline-block;
+  float: right;
+}
