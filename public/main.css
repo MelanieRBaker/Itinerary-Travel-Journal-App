@@ -19,12 +19,27 @@ nav li {
 
 
 
-/*Research*/
-.research {
-  display: inline-block;
+/*left and right boxes*/
+
+.left, .right {
+  width: 45%;
+  margin: 0 2.5%;
+  float: left;
 }
 
+.clear {
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
 
+/*journal*/
+
+.journal {
+  display: block;
+  width: 100%;
+  margin: 20px 2.5%;
+}
 
 
 
@@ -38,8 +53,8 @@ html, body {
   padding: 0;
 }
 #map {
-  height: 50%;
-  width: 40%;
+  height: 300px;
+  width: 100%;
   border: solid 2px;
 }
 .controls {

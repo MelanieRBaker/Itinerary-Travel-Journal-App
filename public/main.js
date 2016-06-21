@@ -276,7 +276,3 @@ function initAutocomplete() {
 
 
   }
-
-
-// date picker
-
