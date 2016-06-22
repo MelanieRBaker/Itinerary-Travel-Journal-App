@@ -9,50 +9,51 @@
     <title>Itinerary Travel Journal</title>
   </head>
   <body ng-app ="app">
-    <nav class="nav">
-      <h1>Itinerary Travel Journal</h1>
-      <ul>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Logout</a></li>
-      </ul>
-    </nav>
-    <!-- map -->
-    <div class="left">
-      <div>
-        <h1>Do your travel research!</h1>
-        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div ng-controller="TestCtrl">
+      <nav class="nav">
+        <h1>Itinerary Travel Journal</h1>
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </nav>
+      <!-- map -->
+      <div class="left">
+        <div>
+          <h1>Do your travel research!</h1>
+          <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+        </div>
+        <div id="map"></div>
       </div>
-      <div id="map"></div>
-    </div>
-    <!-- date picker -->
-    <div class="right">
-      <h1>Pick your travel dates!</h1>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6" ng-controller="TestCtrl">
-            <form name="dateForm" class="form-horizontal">
-              <div class="form-group">
-                <label for="daterange1" class="control-label">Pick Dates</label>
-                <input date-range-picker id="daterange1" name="daterange1" class="form-control date-picker" type="text"
-                  ng-model="date" required options="{eventHandlers: {'apply.daterangepicker': apply()}}"/>
-              </div>
-            </form>
+      <!-- date picker -->
+      <div class="right">
+        <h1>Pick your travel dates!</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <form name="dateForm" class="form-horizontal">
+                <div class="form-group">
+                  <label for="daterange1" class="control-label">Pick Dates</label>
+                  <input date-range-picker id="daterange1" name="daterange1" class="form-control date-picker" type="text"
+                    ng-model="date" required options="{eventHandlers: {'apply.daterangepicker': pickDate}}"/>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
+        <!-- Individual date selector -->
+        <div>
+          <label for="type">Select individual date</label>
+          <select id="type" ng-model="selectedDate">
+            <option ng-repeat="date in dateArray">{{date}}</option>
+          </select>
+        </div>
       </div>
-      <!-- Individual date selector -->
-      <div>
-        <label for="type">Select individual date</label>
-        <select id="type"
-          ng-model="selectedTodo"
-          ng-options="item.name group by item.type for item in tasks">
-        </select>
+      <div class="clear"></div>
+      <!-- Journal -->
+      <div class="journal">
+        <h1>Travel Journal</h1>
       </div>
-    </div>
-    <div class="clear"></div>
-    <!-- Journal -->
-    <div class="journal">
-      <h1>Travel Journal</h1>
     </div>
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/angular/angular.js"></script>
