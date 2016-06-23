@@ -25,7 +25,15 @@
           <input id="pac-input" class="controls" type="text" placeholder="Search Box">
         </div>
         <div id="map"></div>
+         <!-- Journal -->
+      <div class="journal">
+        <h1>Travel Journal</h1>
+        <p>{{selectedDate}}</p>
+        <!-- <input class="journal" type="messageBox" name="journal" ng-if="selectedDate"> -->
+        <textarea rows="10" cols="40" class="message" ng-if="selectedDate"></textarea>
       </div>
+      </div>
+
       <!-- date picker -->
       <div class="right">
         <h1>Pick your travel dates!</h1>
@@ -138,13 +146,12 @@
       </div>
       </div>
       <div class="clear"></div>
-      <!-- Journal -->
-      <div class="journal">
-        <h1>Travel Journal</h1>
-        <p>{{selectedDate}}</p>
-        <input type="" name="" ng-if="selectedDate">
-      </div>
+
     </div>
+
+
+
+
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/moment/moment.js"></script>
@@ -284,8 +291,24 @@
             <option ng-repeat="date in dateArray">{{date}}</option>
           </select>
           24 hour itinerary
-          <table class="table table-striped" ng-if="selectedDate">
+
+
+
+<div ng-if="selectedDate">
+    <label for="amRadio">AM:</label>
+    <input id="amRadio" type="radio" ng-model="colorValue" value="am" />
+
+    <label for="pmRadio">PM:</label>
+    <input id="pmRadio" type="radio" ng-model="colorValue" value="pm" />
+
+    <strong>Selected color:</strong> {{colorValue}}<br />
+
+<table class="table table-striped" ng-if="colorValue">
             <caption>24 hour itinerary</caption>
+
+
+
+
             <thead>
               <tr>
                 <th>{{selectedDate}}</th>
@@ -293,126 +316,68 @@
             </thead>
             <tbody>
               <tr>
-                <td>12am
+                <td>1{{colorValue}}
                   <input type="" name="">
                 </td>
               </tr>
               <tr>
-                <td>1am
+                <td>2{{colorValue}}
                   <input type="" name="">
                 </td>
               </tr>
               <tr>
-                <td>2am
+                <td>3{{colorValue}}
                   <input type="" name="">
                 </td>
               </tr>
               <tr>
-                <td>3am
+                <td>4{{colorValue}}
                   <input type="" name="">
                 </td>
               </tr>
               <tr>
-                <td>4am
+                <td>5{{colorValue}}
                   <input type="" name="">
                 </td>
               </tr>
               <tr>
-                <td>5am
+                <td>6{{colorValue}}
+                  <input type="" name="">
+                </td>
+              <tr>
+                <td>7{{colorValue}}
                   <input type="" name="">
                 </td>
               </tr>
               <tr>
-                <td>6am
-                  <input type="" name="">
-                </td>
-              <tr>
-                <td>7am
+                <td>8{{colorValue}}
                   <input type="" name="">
                 </td>
               </tr>
               <tr>
-                <td>8am
+                <td>9{{colorValue}}
                   <input type="" name="">
                 </td>
               </tr>
               <tr>
-                <td>9am
+                <td>10{{colorValue}}
                   <input type="" name="">
                 </td>
               </tr>
               <tr>
-                <td>10am
+                <td>11{{colorValue}}
                   <input type="" name="">
                 </td>
               </tr>
               <tr>
-                <td>11am
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>12pm
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>1pm
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>2pm
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>3pm
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>4pm
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>5pm
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>6pm
-                  <input type="" name="">
-                </td>
-              <tr>
-                <td>7pm
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>8pm
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>9pm
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>10pm
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>11pm
+                <td>12{{colorValue}}
                   <input type="" name="">
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
+      </div>
       </div>
       <div class="clear"></div>
       Journal

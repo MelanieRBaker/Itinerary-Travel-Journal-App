@@ -1,0 +1,14 @@
+<!--
+
+This is taken care of by the firebase.factory.js and auth.ctrl.js
+
+ -->
+
+<h1>Site Pin</h1> <!-- just for testing to make sure the page actually loaded -->
+<h2>Login</h2>
+<form ng-submit="auth.register()">
+  <input type="email" ng-model="auth.email" class="form-control" placeholder="email" />
+  <input type="password" ng-model="auth.password" class="form-control" placeholder="password" />
+  <button class="btn btn-primary" ng-click="auth.login()" value="Login" />Login</button>
+  <input type="submit" class="btn btn-basic" value="Register"> <!-- find a cool style for the register button -->
+</form>
