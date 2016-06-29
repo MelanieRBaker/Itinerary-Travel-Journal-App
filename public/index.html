@@ -12,27 +12,32 @@
     <div ng-controller="TestCtrl">
       <nav class="nav">
         <h1>Itinerary Travel Journal</h1>
+        <ul>
+          <li><a href="#">Register</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
       </nav>
       <!-- map -->
       <div class="left">
         <div>
-          <h2>Do your travel research!</h2>
+          <h1>Do your travel research!</h1>
           <input id="pac-input" class="controls" type="text" placeholder="Search Box">
         </div>
         <div id="map"></div>
-         <!-- Journal -->
-      <div class="journal">
-        <h2>Travel Journal</h2>
-        <p>{{selectedDate}}</p>
-        <!-- <input class="journal" type="messageBox" name="journal" ng-if="selectedDate"> -->
-        <textarea rows="10" cols="40" class="message" ng-if="selectedDate"></textarea>
+        <!-- Journal -->
+        <div class="journal">
+          <h1>Travel Journal</h1>
+          <p>{{selectedDate}}</p>
+          <textarea rows="10" cols="40" class="message" ng-if="selectedDate"></textarea>
+        </div>
         <input type="submit" ng-click="update(user)" value="Save" ng-if="selectedDate"/>
       </div>
-      </div>
-
       <!-- date picker -->
       <div class="right">
-        <h2>Pick your travel dates!</h2>
+
+        <h1>Pick your travel dates!</h1>
+
         <div class="container">
           <div class="row">
             <div class="col-md-6">
@@ -46,6 +51,7 @@
             </div>
           </div>
         </div>
+
         <!-- Individual date selector -->
         <div>
           <label for="type">Select individual date</label>
@@ -54,102 +60,145 @@
           </select>
           <!-- 24 hour itinerary -->
 
+          <div ng-if="selectedDate" class="scroll">
+            <table class="table table-striped" ng-if="selectedDate">
+              <caption>24 hour itinerary</caption>
+              <thead>
+                <tr>
+                  <th>{{selectedDate}}</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                  <td>12am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>1am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>2am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>3am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>4am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>5am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>6am
+                    <input type="" name="">
+                  </td>
+                <tr>
+                  <td>7am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>8am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>9am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>10am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>11am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>12pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>1pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>2pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>3pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>4pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>5pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>6pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>7pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>8pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>9pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>10pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>11pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          <input type="submit" ng-click="update(user)" value="Save" ng-if="selectedDate"/>
+          <input type="submit" ng-click="update(user)" value="Email" ng-if="selectedDate"/>
+          </div>
 
-
-<div ng-if="selectedDate">
-    <label for="amRadio">AM:</label>
-    <input id="amRadio" type="radio" ng-model="colorValue" value="am" />
-
-    <label for="pmRadio">PM:</label>
-    <input id="pmRadio" type="radio" ng-model="colorValue" value="pm" />
-
-    <strong>Selected time:</strong> {{colorValue}}<br />
-
-<table class="table table-striped" ng-if="colorValue">
-            <caption>24 hour itinerary</caption>
-
-
-
-
-            <thead>
-              <tr>
-                <th>{{selectedDate}}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>2{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>3{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>4{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>5{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>6{{colorValue}}
-                  <input type="" name="">
-                </td>
-              <tr>
-                <td>7{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>8{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>9{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>10{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>11{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>12{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <input type="submit" ng-click="update(user)" value="Save" ng-if="colorValue"/>
-          <input type="submit" ng-click="update(user)" value="Email" ng-if="colorValue"/>
         </div>
-      </div>
+
       </div>
       <div class="clear"></div>
-
     </div>
-
-
-
-
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/moment/moment.js"></script>
@@ -161,7 +210,6 @@
     <script src="controllers/DatePickerCtrl.js" type="text/javascript"></script>
   </body>
 </html>
-
 
 <!-- original do not change
 
@@ -265,18 +313,19 @@
           <input id="pac-input" class="controls" type="text" placeholder="Search Box">
         </div>
         <div id="map"></div>
-         Journal
-      <div class="journal">
-        <h1>Travel Journal</h1>
-        <p>{{selectedDate}}</p>
-        <input class="journal" type="messageBox" name="journal" ng-if="selectedDate">
-        <textarea rows="10" cols="40" class="message" ng-if="selectedDate"></textarea>
+        Journal
+        <div class="journal">
+          <h1>Travel Journal</h1>
+          <p>{{selectedDate}}</p>
+          <textarea rows="10" cols="40" class="message" ng-if="selectedDate"></textarea>
+        </div>
+        <input type="submit" ng-click="update(user)" value="Save" ng-if="selectedDate"/>
       </div>
-      </div>
-
       date picker
       <div class="right">
+
         <h1>Pick your travel dates!</h1>
+
         <div class="container">
           <div class="row">
             <div class="col-md-6">
@@ -290,6 +339,7 @@
             </div>
           </div>
         </div>
+
         Individual date selector
         <div>
           <label for="type">Select individual date</label>
@@ -298,100 +348,145 @@
           </select>
           24 hour itinerary
 
+          <div ng-if="selectedDate" class="scroll">
+            <table class="table table-striped" ng-if="selectedDate">
+              <caption>24 hour itinerary</caption>
+              <thead>
+                <tr>
+                  <th>{{selectedDate}}</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                  <td>12am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>1am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>2am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>3am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>4am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>5am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>6am
+                    <input type="" name="">
+                  </td>
+                <tr>
+                  <td>7am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>8am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>9am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>10am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>11am
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>12pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>1pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>2pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>3pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>4pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>5pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>6pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>7pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>8pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>9pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>10pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+                <tr>
+                  <td>11pm
+                    <input type="" name="">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          <input type="submit" ng-click="update(user)" value="Save" ng-if="selectedDate"/>
+          <input type="submit" ng-click="update(user)" value="Email" ng-if="selectedDate"/>
+          </div>
 
-
-<div ng-if="selectedDate">
-    <label for="amRadio">AM:</label>
-    <input id="amRadio" type="radio" ng-model="colorValue" value="am" />
-
-    <label for="pmRadio">PM:</label>
-    <input id="pmRadio" type="radio" ng-model="colorValue" value="pm" />
-
-    <strong>Selected color:</strong> {{colorValue}}<br />
-
-<table class="table table-striped" ng-if="colorValue">
-            <caption>24 hour itinerary</caption>
-
-
-
-
-            <thead>
-              <tr>
-                <th>{{selectedDate}}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>2{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>3{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>4{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>5{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>6{{colorValue}}
-                  <input type="" name="">
-                </td>
-              <tr>
-                <td>7{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>8{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>9{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>10{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>11{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-              <tr>
-                <td>12{{colorValue}}
-                  <input type="" name="">
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
-      </div>
+
       </div>
       <div class="clear"></div>
-
     </div>
-
-
-
-
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/moment/moment.js"></script>

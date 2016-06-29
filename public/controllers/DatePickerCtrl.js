@@ -11,8 +11,9 @@ app.controller('TestCtrl', function ($scope, $timeout) {
       $timeout ()
       console.log("dateArray", $scope.dateArray);
       return $scope.dateArray;
-     }
-   })
+    }
+  })
+
 
 
 

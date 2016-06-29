@@ -1,5 +1,14 @@
 var app = angular.module('app', ['daterangepicker']);
 
+ var config = {
+    apiKey: "AIzaSyBWFjhf484iUQ3B3VX94wQuZ9pcjAaZgsI",
+    authDomain: "pro-planet-134118.firebaseapp.com",
+    databaseURL: "https://pro-planet-134118.firebaseio.com",
+    storageBucket: "pro-planet-134118.appspot.com",
+  };
+  firebase.initializeApp(config);
+
+
 function initAutocomplete() {
     var map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 36.174465, lng: -86.767960},
@@ -80,7 +89,6 @@ function initAutocomplete() {
       map.fitBounds(bounds);
     });
   }
-
 
 
 
