@@ -13,21 +13,19 @@
       <nav class="nav">
         <h1>Itinerary Travel Journal</h1>
         <ul>
-          <li><a href="#">Register</a></li>
-          <li><a href="#">Login</a></li>
           <li><a href="#">Logout</a></li>
         </ul>
       </nav>
       <!-- map -->
       <div class="left">
         <div>
-          <h1>Do your travel research!</h1>
+          <h2>Do your travel research!</h2>
           <input id="pac-input" class="controls" type="text" placeholder="Search Box">
         </div>
         <div id="map"></div>
         <!-- Journal -->
         <div class="journal">
-          <h1>Travel Journal</h1>
+          <h2>Travel Journal</h2>
           <p>{{selectedDate}}</p>
           <textarea rows="10" cols="40" class="message" ng-if="selectedDate"></textarea>
         </div>
@@ -36,13 +34,13 @@
       <!-- date picker -->
       <div class="right">
 
-        <h1>Pick your travel dates!</h1>
+        <h2>Pick your travel dates!</h2>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <form name="dateForm" class="form-horizontal">
-                <div class="form-group">
+        <div>
+          <div>
+            <div>
+              <form name="dateForm">
+                <div>
                   <label for="daterange1" class="control-label">Pick Dates</label>
                   <input date-range-picker id="daterange1" name="daterange1" class="form-control date-picker" type="text"
                     ng-model="date" required options="{eventHandlers: {'apply.daterangepicker': pickDate}}"/>
@@ -190,8 +188,10 @@
                 </tr>
               </tbody>
             </table>
+            <div class="tableButtons">
           <input type="submit" ng-click="update(user)" value="Save" ng-if="selectedDate"/>
           <input type="submit" ng-click="update(user)" value="Email" ng-if="selectedDate"/>
+          </div>
           </div>
 
         </div>

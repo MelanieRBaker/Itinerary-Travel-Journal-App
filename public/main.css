@@ -1,9 +1,19 @@
+/*global*/
+h1, h2 {font-weight:100;}
+
+label {font-weight:400;}
+
+body {
+  background: aliceblue;
+}
+
 /*nav bar*/
 
 nav {
   border: solid 2px;
   text-align: center;
   padding: 10px 0;
+  background: powderblue;
 }
 
 nav h1 {
@@ -20,6 +30,8 @@ nav ul {
 nav li {
   display: inline-block;
 }
+
+nav li a { color:#665095; cursor: pointer; }
 
 
 
@@ -51,11 +63,36 @@ nav li {
 
 /*24 hour itinerary*/
 
+table.table {
+  margin-bottom: 0;
+}
+
 table.table input{
   width: 90%
 }
 
+table.table caption {
+  text-align: center;
+  background: #f9f9f9;
+  font-size: 22px;
+}
 
+table.table .ng-binding {
+  font-weight: 400;
+  background: #fff8f8;
+  text-align: center;
+}
+
+.tableButtons {
+  background: #f9f9f9;
+  padding: 20px;
+}
+
+
+
+.table-striped > tbody > tr:nth-of-type(even) {
+  background: #fff8f8;
+}
 
 /*Google Map API*/
 
@@ -122,9 +159,11 @@ html, body {
   float: right;
 }
 
+.date-picker {margin-bottom:30px;}
+
 
 /*scroll*/
-  .scroll {height:200px;width:100%;margin:0 auto; border:1px solid #000; overflow:auto;}
+  .scroll {height:450px;width:100%;margin:0 auto; border:1px solid #000; overflow:auto;}
   .scroll::-webkit-scrollbar {
     width: 1em;
 }
@@ -136,4 +175,10 @@ html, body {
 .scroll::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
+}
+
+
+@media screen and ( max-width: 850px ) {
+
+  .left, .right {width:100%; clear:both;}
 }
