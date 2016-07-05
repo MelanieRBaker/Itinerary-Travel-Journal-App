@@ -7,10 +7,24 @@ body {
   background: aliceblue;
 }
 
+
+/*login*/
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+}
+
+
 /*nav bar*/
 
 nav {
-  border: solid 2px;
+  border: solid 1px #666;
   text-align: center;
   padding: 10px 0;
   background: powderblue;
@@ -54,11 +68,11 @@ nav li a { color:#665095; cursor: pointer; }
 .journal {
   display: block;
   width: 100%;
-
 }
 
 .message {
   width: 100%;
+  border: solid 1px #666;
 }
 
 /*24 hour itinerary*/
@@ -104,7 +118,7 @@ html, body {
 #map {
   height: 300px;
   width: 100%;
-  border: solid 2px;
+  border: solid 1px #666;
 }
 .controls {
   margin-top: 10px;
@@ -159,11 +173,12 @@ html, body {
   float: right;
 }
 
-.date-picker {margin-bottom:30px;}
+.date-picker {margin-bottom:30px; border: 1px solid #666; border-radius: 0;}
+
 
 
 /*scroll*/
-  .scroll {height:450px;width:100%;margin:0 auto; border:1px solid #000; overflow:auto;}
+  .scroll {height:450px;width:100%;margin:0 auto; border:1px solid #666; overflow:auto;}
   .scroll::-webkit-scrollbar {
     width: 1em;
 }
