@@ -20,14 +20,20 @@ body {
   padding: 20px;
 }
 
+.logwrap input {margin-bottom:15px;}
+
 
 /*nav bar*/
 
 nav {
   border: solid 1px #666;
   text-align: center;
-  padding: 10px 0;
+  padding: 40px 0 21px 0;
   background: powderblue;
+}
+
+.navLogin {
+  padding: 40px 0;
 }
 
 nav h1 {
@@ -45,7 +51,7 @@ nav li {
   display: inline-block;
 }
 
-nav li a { color:#665095; cursor: pointer; }
+nav a { color:#665095; cursor: pointer; }
 
 
 
@@ -178,7 +184,7 @@ html, body {
 
 
 /*scroll*/
-  .scroll {height:450px;width:100%;margin:0 auto; border:1px solid #666; overflow:auto;}
+  .scroll {height:475px;width:100%;margin:0 auto; border:1px solid #666; overflow:auto;}
   .scroll::-webkit-scrollbar {
     width: 1em;
 }
